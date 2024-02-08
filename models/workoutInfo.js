@@ -27,7 +27,15 @@ workoutInfo.init({
     },
     cardioType: {
         type:DataTypes.CHAR
-    }
+    },
+     User_id: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+
+    references{
+      model: 'User',
+      key: 'id',
+    },
 
 })
 

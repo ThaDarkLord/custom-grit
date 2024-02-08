@@ -17,7 +17,12 @@ Routines.init({
 //   make this foreign key for users id
     User_id: {
     type: DataTypes.TEXT,
-    allowNull: false
+    allowNull: false,
+
+    references{
+      model: 'User',
+      key: 'id',
+    },
   },
  
 });

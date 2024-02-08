@@ -11,6 +11,7 @@ class User extends Model {
 
 User.init(
   {
+    
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -36,21 +37,15 @@ User.init(
         len: [6],
       },
     },
-    heightInches{
+    heightInches: {
         type: DataTypes.NUMBER,
         allowNull: false,
     },
-    weightLbs{
+    weightLbs: {
         type: DataTypes.NUMBER,
         allowNull:false
     },
-    age{
-        type: DataTypes.NUMBER,
-        allowNull: false
-    }
-    gender{
-        type: DataTypes.NUMBER,
-    }
+
   },
   {
     hooks: {

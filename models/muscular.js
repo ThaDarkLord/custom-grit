@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Muscular extends model{}
+class Muscular extends Model{}
 Muscular.init({
   id: {
     type: DataTypes.INTEGER,
@@ -10,7 +10,7 @@ Muscular.init({
     autoIncrement: true,
   },
     type: {
-    type: DataTypes.CHAR
+    type: DataTypes.CHAR,
     allowNull: false
   },
   intensity: {
@@ -20,27 +20,36 @@ Muscular.init({
     type: DataTypes.TEXT,
   },
     rep_range: {
-    type: DataTypes.RANGE
+    type: DataTypes.INTEGER
   },
   sets: {
-    type: DataTypes.RANGE
+    type: DataTypes.INTEGER
   },
   rest: {
-    type: DataTypes.NUMBER
+    type: DataTypes.INTEGER
   },
   liftPercentage: {
     type: DataTypes.FLOAT
   },
    routine_id: {
-    type: DataTypes.TEXT,
+    type: DataTypes.INTEGER,
     allowNull: false,
 
-    references{
-      model: 'Routine',
+    references: {
+      model: 'routine',
       key: 'id',
     },
   },
-});
+}, 
+{
+      sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'muscular',
+}
+
+);
 
 
 module.exports = Muscular;

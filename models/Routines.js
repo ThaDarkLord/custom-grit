@@ -12,19 +12,28 @@ Routines.init({
   },
   routine_name: {
     type: DataTypes.TEXT,
-    allowNull: False
-  }
+    allowNull: false
+  },
 //   make this foreign key for users id
     user_id: {
-    type: DataTypes.TEXT,
+    type: DataTypes.INTEGER,
     allowNull: false,
 
-    references{
-      model: 'User',
+    references: {
+      model: 'user',
       key: 'id',
     },
   },
+
  
-});
+},
+{  
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'routine',
+}
+);
 
 module.exports = Routines;

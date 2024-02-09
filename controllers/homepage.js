@@ -1,0 +1,9 @@
+const router = require("express").Router();
+const {Routines, muscular, Cardio} = require('../models');
+const path = require('path');
+
+
+// need to add route to get to the homepage
+router.get('/', async (req, res) => {
+res.sendFile(path.join(__dirname, "./public/index.html"));
+})

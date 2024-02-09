@@ -38,12 +38,12 @@ User.init(
       },
     },
     heightInches: {
-        type: DataTypes.NUMBER,
-        allowNull: false,
+        type: DataTypes.INTEGER,
+        
     },
     weightLbs: {
-        type: DataTypes.NUMBER,
-        allowNull:false
+        type: DataTypes.INTEGER,
+       
     },
 
   },

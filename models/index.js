@@ -1,6 +1,6 @@
 
 const Cardio =require('./cardio');
-const muscular =require('./muscular');
+const Muscular =require('./muscular');
 const User =require('./User');
 const workoutInfo =require('./workoutInfo');
 const Routines =require('./Routines');
@@ -22,11 +22,11 @@ workoutInfo.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-Routines.hasMany(muscular, {
+Routines.hasMany(Muscular, {
     foreignKey: 'routine_id'
 });
 
-muscular.BelongsToMany(Routines,{
+Muscular.belongsTo(Routines,{
     foreignKey: 'routine_id',
 })
 
@@ -34,9 +34,9 @@ Routines.hasMany(Cardio,{
     foreignKey: 'routine_id'
 })
 
-Cardio.belongsToMany(Routines, {
+Cardio.belongsTo(Routines, {
     foreignKey: 'routine_id'
 })
 
 
-module.exports = {User, Routines, workoutInfo, muscular, Cardio};
+module.exports = {User, Routines, workoutInfo, Muscular, Cardio};

@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class workoutInfo extends model{}
+class workoutInfo extends Model{}
 
 workoutInfo.init({
       id: {
@@ -15,12 +15,12 @@ workoutInfo.init({
         allowNull: false,
     },
     fitnessGoal: {
-        type: DataTypes.CHAR,
+        type: DataTypes.TEXT,
         allowNull: false
     },
     availability: {
-        type: DataTypes.NUMBER,
-        validate {
+        type: DataTypes.INTEGER,
+        validate: {
             min: 1,
             max: 7,
         }
@@ -29,15 +29,23 @@ workoutInfo.init({
         type:DataTypes.CHAR
     },
      user_id: {
-    type: DataTypes.TEXT,
+    type: DataTypes.INTEGER,
     allowNull: false,
 
-    references{
-      model: 'User',
+    references: {
+      model: 'user',
       key: 'id',
     },
 
 }
-})
+},
+{
+        sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'workoutInfo',
+}
+)
 
 module.exports = workoutInfo;

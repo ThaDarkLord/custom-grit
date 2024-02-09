@@ -1,1 +1,0 @@
-// Main Model for Muscular Training, Hypertrophic, Sharpen, and maxStrength will extend this

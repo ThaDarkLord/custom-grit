@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const {Routines, muscular, Cardio} = require('../models');
 const path = require('path');
 
 

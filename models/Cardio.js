@@ -34,3 +34,5 @@ Cardio.init({
     },
   },
 })
+
+module.exports = Cardio;

@@ -28,7 +28,7 @@ workoutInfo.init({
     cardioType: {
         type:DataTypes.CHAR
     },
-     User_id: {
+     user_id: {
     type: DataTypes.TEXT,
     allowNull: false,
 
@@ -37,6 +37,7 @@ workoutInfo.init({
       key: 'id',
     },
 
+}
 })
 
 module.exports = workoutInfo;

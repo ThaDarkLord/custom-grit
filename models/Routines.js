@@ -15,7 +15,7 @@ Routines.init({
     allowNull: False
   }
 //   make this foreign key for users id
-    User_id: {
+    user_id: {
     type: DataTypes.TEXT,
     allowNull: false,
 

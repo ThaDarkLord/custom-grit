@@ -1,5 +1,7 @@
+
+
 body {
-    background-image: url(../../public/img/weightlifter.jpeg);
+    background-image: url(/img/weightlifter.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
     /* change image find one with better resolution */
@@ -10,7 +12,7 @@ body {
 }
 
 .button{
-    margin: 30rem 0rem;
+    margin: 20rem 0rem;
 }
 
 .account{

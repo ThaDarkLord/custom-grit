@@ -1,10 +1,30 @@
 const router = require("express").Router();
-const path = require('path');
+const { Routines , User} = require('../models')
 
 
-// need to add route to get to the homepage
-router.get('/', async (req, res) => {
-res.sendFile(path.join(__dirname, "./public/index.html"));
-})
+router.get('/', (req, res) => {
+    res.render('homepage')
+  })
+  
+  router.get('/login', (req, res) => {
+    res.render('login')
+  })
+  
+  router.get('/routine', (req, res) => {
+    res.render('routine')
+  })
+  
+  router.get('/signUp', (req, res) => {
+    res.render('signUp')
+  })
+  
+  router.get('/userInput', (req, res) => {
+    res.render('userInput')
+  })
+  
+  router.get('/profile', (req, res) =>{
+    res.render('profile')
+  })
+
 
 module.exports = router;

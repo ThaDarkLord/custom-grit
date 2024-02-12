@@ -1,0 +1,17 @@
+{{log this}}
+
+
+
+<div style="background-color: white;">
+    {{username}}
+    {{workoutInfo.experience}}
+    <img src="{{typeOfWorkout workoutInfo.experience workoutInfo.muscularGoal}}" alt="">
+
+
+    <section>
+{{#each routines as |routine|}}
+<h2>{{routine.routine_name}}</h2>
+{{/each}}
+
+    </section>
+</div>

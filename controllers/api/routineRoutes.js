@@ -6,7 +6,7 @@ const { route } = require("../homepage");
 //     try {
 //         const routineData = await Routines.findByPk(req.params.id);
 //         console.log(routineData)
-//         res.render('routine', routineData)
+//      
 //         res.status(200).json(routineData)
 //     } catch (error) {
 //         res.status(500).json(error)

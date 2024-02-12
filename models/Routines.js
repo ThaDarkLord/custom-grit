@@ -15,6 +15,10 @@ Routines.init({
     allowNull: false
   },
 //   make this foreign key for users id
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
     type: DataTypes.INTEGER,
     allowNull: false,

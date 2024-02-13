@@ -11,7 +11,7 @@ router.get("/profile", (req, res) => {
 });
 
 router.get("/routine", (req, res) => {
-  res.render("routine");
+  res.render("profile");
 });
 
 router.get("/signUp", (req, res) => {

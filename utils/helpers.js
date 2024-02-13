@@ -1,22 +1,22 @@
 module.exports = {
     typeOfWorkout: (experience, muscularGoal ) => {
-        if (experience === 1 && muscularGoal === 1) {
+        if (experience === 3 && muscularGoal === 2) {
           return `/img/advancedStrength.png`;
-        } else if (experience === "Advanced" && muscularGoal === "Size") {
+        } else if (experience === 3 && muscularGoal === 1) {
           return `/img/advancedSize.png`;
-        } else if (experience === "Advanced" && muscularGoal === "Sharpen") {
+        } else if (experience === 3 && muscularGoal === 3) {
           return `/img/advancedSharpen.png`;
         } else if (
-          experience === "Intermediate" &&
-          muscularGoal === "Strength"
+          experience === 2 &&
+          muscularGoal === 2
         ) {
-          return `/img/`;
-        } else if (experience === "Intermediate" && muscularGoal === "Size") {
-          return `/img/`;
-        } else if (experience === "Intermediate" && muscularGoal === "Sharpen") {
-          return `/img/`;
+          return `/img/INTstrength.png`;
+        } else if (experience === 2 && muscularGoal === 1) {
+          return `/img/INTSize.png`;
+        } else if (experience === 2 && muscularGoal === 3) {
+          return `/img/INTSharpen.png`;
         } else {
-            return `/img/weightlifter.jpeg`
+            return `/img/Beginner.png`
         }
         }
     }

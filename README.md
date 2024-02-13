@@ -13,7 +13,10 @@ time. Later versions will allow for community and user interaction.
 
 The user will arrive at the homepage. They will have the option to login or sign up. Upon completion of logging in or signing up they can click the build a workout button which will bring them to the userinput section where they will be prompted with questions about the goals that they wish to achieve. Once they input their goals a workout regime will be populated for them.
 
-![alt text](assets/images/screenshot.png)
+![img of deployed site](./public/img/Screenshot%202024-02-13%20at%201.08.00 PM.png)
+
+Deployed application:
+https://damp-spire-43145-9f06d97d997c.herokuapp.com/
 
 ## Credits
 

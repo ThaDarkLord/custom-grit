@@ -18,5 +18,12 @@ module.exports = {
         } else {
             return `/img/Beginner.png`
         }
+        },
+        cardio : (cardioGoal) => {
+          if (cardioGoal === 1){
+            return `/img/HIIT.png`
+          } else {
+            return `/img/LISS.png`
+          }
         }
     }

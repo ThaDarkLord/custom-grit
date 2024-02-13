@@ -28,14 +28,7 @@ const workoutInfoData = [
     cardioGoal: 1,
     availability: 1,
     user_id: 4,
-  },
-  {
-    experience: 3,
-    muscularGoal: 2,
-    cardioGoal: 1,
-    availability: 1,
-    user_id: 5,
-  },
+  }
 ];
 const seedWorkoutInfo = () =>
   workoutInfo.bulkCreate(workoutInfoData, {

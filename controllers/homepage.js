@@ -1,12 +1,13 @@
 const router = require("express").Router();
 const { Routines, User, workoutInfo } = require("../models");
 const withAuth = require('../utils/auth')
+
 router.get("/", (req, res) => {
-  res.render("homepage");
+  res.render("login");
 });
 
-router.get("/login", (req, res) => {
-  res.render("login");
+router.get("/profile", (req, res) => {
+  res.render("homepage");
 });
 
 router.get("/routine", (req, res) => {

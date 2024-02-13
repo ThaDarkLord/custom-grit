@@ -1,7 +1,22 @@
+
 <section class="card">
-    <a href="/api/routines/{{id}}">
-        {{!-- need to console log this, see what we can put on the page --}}
+        {{!-- if user's workout info has beginner show beginner png --}}
+
+        {{!-- if user's workout info has intermediate & ...--}}
+         {{!-- has strength selected --}}
+
+         {{!-- has size selected --}}
+
+        {{!-- has sharpen selected --}}
+
+
+        {{!-- if user's workout info has advanced & ...--}}
        
-        <img src="/img/WorkoutBuilderIMGS/{{?}}" alt="">
+        {{!-- has strength selected --}}
+        <img src="{{typeOfWorkout workoutInfo.experience workoutInfo.muscularGoal}}" alt="">
+        {{!-- has size selected --}}
+        
+        {{!-- has sharpen selected --}}
+      
     </a>
 </section>

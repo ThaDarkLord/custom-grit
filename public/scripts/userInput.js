@@ -9,7 +9,7 @@ const availability = document.querySelector('#availability').value.trim();
 console.log(experience , muscularGoal, cardioGoal , availability)
 
 if (experience && muscularGoal && cardioGoal && availability){
-    const response = await fetch('/api/users/', {
+    const response = await fetch('/api/workoutInfo/', {
         method: 'POST',
         body: JSON.stringify({experience, muscularGoal, cardioGoal, availability}),
         headers: {'Content-Type': 'application/json'},

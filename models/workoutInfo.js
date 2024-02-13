@@ -12,15 +12,15 @@ workoutInfo.init(
       autoIncrement: true,
     },
     experience: {
-      type: DataTypes.TEXT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     muscularGoal: {
-      type: DataTypes.TEXT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     cardioGoal: {
-      type: DataTypes.TEXT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     availability: {

@@ -3,9 +3,9 @@ const sequelize = require('./config/connection');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers/index')
-
-const helpers = require('./views/layouts/utils/helper')
+const routes = require('./controllers')
+require('dotenv').config();
+const helpers = require('./utils/helpers')
 
 const app = express();
 
@@ -21,17 +21,20 @@ const sess = {
 app.use(session(sess));
 
 // const hbs = exphbs.create({ helpers });
-const hbs = exphbs.create({});
+const hbs = exphbs.create({helpers});
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(routes);
 
+
+
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Server listening on: http://localhost:' + PORT));
 });

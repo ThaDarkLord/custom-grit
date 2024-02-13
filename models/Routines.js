@@ -14,18 +14,19 @@ Routines.init({
     type: DataTypes.TEXT,
     allowNull: false
   },
-//   make this foreign key for users id
-    user_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-
-    references: {
-      model: 'user',
-      key: 'id',
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-  },
+     user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
 
- 
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
 },
 {  
     sequelize,
